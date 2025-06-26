@@ -49,7 +49,7 @@ class Stack:
     def push(self, element):
         self.stack.append(element)
 
-    def pop(self) -> Any:
+    def pop(self):
         if self.isEmpty():
             return 'Stack is empty'
         return self.stack.pop()
