@@ -35,7 +35,8 @@ class Stack:
     def isEmpty(self):
         return self.size == 0
 
-    def stackSize(self):
+    @property
+    def stackSize(self) -> int:
         return self.size
 
     def traverseAndPrint(self):
@@ -58,4 +59,12 @@ print("Pop: ", myStack.pop())
 print("LinkedList after Pop: ", end="")
 myStack.traverseAndPrint()
 print("isEmpty: ", myStack.isEmpty())
-print("Size: ", myStack.stackSize())
+print("Size: ", myStack.stackSize)
+
+'''Stacks are used in many real-world scenarios:
+
+Undo/Redo operations in text editors
+Browser history (back/forward)
+Function call stack in programming
+Expression evaluation
+'''

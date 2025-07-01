@@ -81,3 +81,12 @@ print("Stack after Pop: ", myStack.stack)
 print("Peek: ", myStack.peek())
 print("isEmpty: ", myStack.isEmpty())
 print("Size: ", myStack.size)
+
+
+'''Stacks are used in many real-world scenarios:
+
+Undo/Redo operations in text editors
+Browser history (back/forward)
+Function call stack in programming
+Expression evaluation
+'''
