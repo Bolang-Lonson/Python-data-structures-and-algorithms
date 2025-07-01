@@ -43,41 +43,64 @@ print("isEmpty: ", isEmpty)
 # Size
 print("Size: ", len(queue))
 
-# ************************* Here's a complete implementation of a Queue class: *******************************************
+# ************************* Here's a complete implementation of a Queue class: ****************************
 
 class Queue:
-  def __init__(self):
-    self.queue = []
-    
-  def enqueue(self, element):
-    self.queue.append(element)
+	'''Creates queue object that follows the First-In-First-Out (FIFO) principle
+	
+		Author:
+			Bolang-Lonson
+	'''
+	def __init__(self):
+		self.queue = []
 
-  def dequeue(self):
-    if self.isEmpty():
-      return "Queue is empty"
-    return self.queue.pop(0)
+	@property
+	def size(self) -> int:
+		'''number of elements in the queue'''
+		return len(self.queue)
+	
+	@property
+	def isEmpty(self) -> bool:
+		'''True if queue has no elements,\n
+		False if queue has atleast one element
+		'''
+		return bool(self.size)
 
-  def peek(self):
-    if self.isEmpty():
-      return "Queue is empty"
-    return self.queue[0]
+	def enqueue(self, element):
+		'''Adds element to end of the queue'''
+		self.queue.append(element)
 
-  def isEmpty(self):
-    return len(self.queue) == 0
+	def dequeue(self):
+		'''Removes first element in queue'''
+		if self.isEmpty:
+			return 'Queue is empty'
+		return self.queue.pop()
+	
+	def peek(self):
+		'''Peek at the first element in the queue'''
+		if self.isEmpty:
+			return 'Queue is empty'
+		return self.queue[0]
+	
 
-  def size(self):
-    return len(self.queue)
+if __name__ == '__main__':
+	# Create a queue
+	myQueue = Queue()
 
-# Create a queue
-myQueue = Queue()
+	myQueue.enqueue('A')
+	myQueue.enqueue('B')
+	myQueue.enqueue('C')
 
-myQueue.enqueue('A')
-myQueue.enqueue('B')
-myQueue.enqueue('C')
+	print("Queue: ", myQueue.queue)
+	print("Peek: ", myQueue.peek())
+	print("Dequeue: ", myQueue.dequeue())
+	print("Queue after Dequeue: ", myQueue.queue)
+	print("isEmpty: ", myQueue.isEmpty)
+	print("Size: ", myQueue.size)
 
-print("Queue: ", myQueue.queue)
-print("Peek: ", myQueue.peek())
-print("Dequeue: ", myQueue.dequeue())
-print("Queue after Dequeue: ", myQueue.queue)
-print("isEmpty: ", myQueue.isEmpty())
-print("Size: ", myQueue.size())
+
+'''Queues are used in many real-world scenarios:
+
+Task scheduling in operating systems
+Breadth-first search in graphs
+Message queues in distributed systems'''

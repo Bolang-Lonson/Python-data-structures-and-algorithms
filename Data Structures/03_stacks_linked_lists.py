@@ -47,19 +47,21 @@ class Stack:
         print()
 
 
-myStack = Stack()
-myStack.push('A')
-myStack.push('B')
-myStack.push('C')
+if __name__ == '__main__':
+    # Create a stack
+    myStack = Stack()
+    myStack.push('A')
+    myStack.push('B')
+    myStack.push('C')
 
-print("LinkedList: ", end="")
-myStack.traverseAndPrint()
-print("Peek: ", myStack.peek())
-print("Pop: ", myStack.pop())
-print("LinkedList after Pop: ", end="")
-myStack.traverseAndPrint()
-print("isEmpty: ", myStack.isEmpty())
-print("Size: ", myStack.stackSize)
+    print("LinkedList: ", end="")
+    myStack.traverseAndPrint()
+    print("Peek: ", myStack.peek())
+    print("Pop: ", myStack.pop())
+    print("LinkedList after Pop: ", end="")
+    myStack.traverseAndPrint()
+    print("isEmpty: ", myStack.isEmpty())
+    print("Size: ", myStack.stackSize)
 
 '''Stacks are used in many real-world scenarios:
 

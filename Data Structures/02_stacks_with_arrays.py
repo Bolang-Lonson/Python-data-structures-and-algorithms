@@ -68,19 +68,20 @@ class Stack:
         return len(self.stack)
     
 
-# Create a stack
-myStack = Stack()
+if __name__ == '__main__':
+    # Create a stack
+    myStack = Stack()
 
-myStack.push('A')
-myStack.push('B')
-myStack.push('C')
+    myStack.push('A')
+    myStack.push('B')
+    myStack.push('C')
 
-print("Stack: ", myStack.stack)
-print("Pop: ", myStack.pop())
-print("Stack after Pop: ", myStack.stack)
-print("Peek: ", myStack.peek())
-print("isEmpty: ", myStack.isEmpty())
-print("Size: ", myStack.size)
+    print("Stack: ", myStack.stack)
+    print("Pop: ", myStack.pop())
+    print("Stack after Pop: ", myStack.stack)
+    print("Peek: ", myStack.peek())
+    print("isEmpty: ", myStack.isEmpty())
+    print("Size: ", myStack.size)
 
 
 '''Stacks are used in many real-world scenarios:
