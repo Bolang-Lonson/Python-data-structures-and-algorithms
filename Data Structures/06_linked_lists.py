@@ -81,3 +81,40 @@ node1 = deleteSpecificNode(node1, node4)
 
 print("\nAfter deletion:")
 traverseAndPrint(node1)
+
+'''Insert a Node in a Linked List
+
+To insert a node in a linked list we first need to create the node, and then at the position where we insert it, we need to adjust the pointers so that the previous node points to the new node, and the new node points to the correct next node.
+'''
+def insertNodeAtPosition(head: Node, newNode: Node, position: int) -> Node:
+    '''
+        Inserts node in linked list at specified position
+
+        params:
+            head: head of linked list
+            newNode: new node to be inserted
+            position: position in linked list to insert
+    '''
+    if position == 1:
+        newNode.next = head
+        return newNode
+    
+    currNode: Node = head
+    for _ in range(position - 2):
+        if currNode is None:
+            break
+        currNode = currNode.next
+
+    newNode.next = currNode.next
+    currNode.next = newNode
+    return head
+
+print("Original list:")
+traverseAndPrint(node1)
+
+# Insert a new node with value 97 at position 2
+newNode = Node(97)
+node1 = insertNodeAtPosition(node1, newNode, 2)
+
+print("\nAfter insertion:")
+traverseAndPrint(node1)
