@@ -89,3 +89,32 @@ def preOrderTransversal(node):
 
 # Test
 preOrderTransversal(root)
+
+'''In-order Traversal of Binary Trees
+In-order Traversal is a type of Depth First Search, where each node is visited in a certain order.
+
+In-order Traversal does a recursive In-order Traversal of the left subtree, visits the root node, and finally, does a recursive In-order Traversal of the right subtree. This traversal is mainly used for Binary Search Trees where it returns values in ascending order.
+
+'''
+def inOrderTransversal(node):
+    if node is None:
+        return
+    inOrderTransversal(node.left)
+    print(node.data, end=', ')
+    inOrderTransversal(node.right)
+
+# Test
+inOrderTransversal(root)
+
+'''Post-order Traversal of Binary Trees
+Post-order Traversal is a type of Depth First Search, where each node is visited in a certain order..
+
+Post-order Traversal works by recursively doing a Post-order Traversal of the left subtree and the right subtree, followed by a visit to the root node. It is used for deleting a tree, post-fix notation of an expression tree, etc.
+
+'''
+def postOrderTraversal(node):
+    if node is None:
+        return
+    postOrderTraversal(node.left)
+    postOrderTraversal(node.right)
+    print(node.data, end=', ')
